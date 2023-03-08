@@ -22,8 +22,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@gits-id/ui-nuxt": "^0.16.1",
-    "vue-slick-carousel": "^1.0.6"
+    "@gits-id/ui-nuxt": "^0.16.1"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.3.0",
