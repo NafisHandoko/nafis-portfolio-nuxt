@@ -7,6 +7,7 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Services</a></li>
+          <li><a href="#">Skills</a></li>
           <li><a href="#">Works</a></li>
         </ul>
       </nav>
@@ -16,27 +17,35 @@
       </div>
     </div>
   </header>
-  <section class="bg-[#141414] py-20">
-    <div class="container mx-auto flex flex-col items-center">
-      <h2 class="font-bold text-2xl text-white mb-7">What i do</h2>
-      <div class="flex flex-row items-center gap-7 text-white px-32">
-        <div v-for="skill in skills" :key="skill.id">
+  <section class="bg-[#141414] py-16 text-white">
+    <div class="container mx-auto flex flex-col items-center text-center px-32">
+      <h2 class="font-bold text-2xl text-white mb-7">Who am i</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem ea laudantium alias blanditiis,
+        fugiat consequatur cumque nam praesentium laborum, libero itaque adipisci autem a dolor quam, ut recusandae iusto
+        sint tenetur. Enim laboriosam natus commodi, dignissimos praesentium eos tempora.</p>
+    </div>
+  </section>
+  <section class="bg-[#141414] py-16 text-white">
+    <div class="container mx-auto flex flex-col items-center px-32">
+      <h2 class="font-bold text-2xl mb-7">What i do</h2>
+      <div class="flex flex-row items-center gap-7">
+        <div v-for="service in services" :key="service.id">
           <div class="bg-[#252525] rounded border border-[#252525] hover:border-white p-5 pt-10 space-y-2">
-            <span class="font-bold text-lg">{{ skill.id }}</span>
-            <h3 class="font-bold text-lg">{{ skill.title }}</h3>
-            <p class="text-white/[.5]">{{ skill.desc }}</p>
+            <span class="font-bold text-lg">{{ service.id }}</span>
+            <h3 class="font-bold text-lg">{{ service.title }}</h3>
+            <p class="text-white/[.5]">{{ service.desc }}</p>
           </div>
         </div>
       </div>
     </div>
   </section>
   <section>
-    
+
   </section>
 </template>
 
 <script setup>
-const skills = ref([
+const services = ref([
   {
     id: 1,
     title: "Web Development",
