@@ -1,6 +1,6 @@
 <template>
-  <div class="fixed top-[30%] left-[8%] h-[50vh] border border-white"></div>
-  <div class="flex flex-col items-center justify-between py-10 fixed top-[30%] right-[8%] text-white h-[50vh]">
+  <div class="fixed top-[30%] left-[6%] h-[50vh] border-r border-white"></div>
+  <div class="flex flex-col items-center justify-between py-10 fixed top-[30%] right-[6%] text-white h-[50vh]">
     <a class="" href="https://github.com/nafishandoko"><i class="bi bi-github"></i></a>
     <a class="" href="https://www.linkedin.com/in/nafishandoko"><i class="bi bi-linkedin"></i></a>
     <a class="" href="https://instagram.com/nafishandoko"><i class="bi bi-instagram"></i></a>
@@ -61,14 +61,24 @@
   <section class="bg-[#141414] py-16 text-white">
     <div class="container mx-auto flex flex-col items-center px-40">
       <h2 class="font-bold text-2xl mb-7">My projects</h2>
-      <VueSlickCarousel :arrows="true" :dots="true">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
-      </VueSlickCarousel>
+      <div class="grid grid-cols-3 gap-7 text-black">
+        <div class="bg-white rounded-xl p-2" v-for="(project, index) in projects">
+          <div class="bg-center bg-cover w-full h-[150px] shadow-xl rounded-lg bg-[url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80')]"></div>
+          <div class="flex flex-row items-center p-4 gap-3">
+            <div class="flex flex-col gap-1">
+              <h3 class="font-bold">Social Media App</h3>
+              <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat qui officia corporis tempora nihil voluptate.</p>
+            </div>
+            <div class="text-lg flex flex-col items-center gap-1">
+              <a class="" href="https://github.com/nafishandoko"><i class="bi bi-github"></i></a>
+              <a class="" href="https://github.com/nafishandoko"><i class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+  <footer></footer>
 </template>
 
 <script setup>
@@ -120,6 +130,39 @@ const skills = ref([
     id: 6,
     class: "devicon-nextjs-original-wordmark",
     url: "https://nextjs.org/"
+  }
+])
+
+const projects = ref([
+  {
+    title: "Social Media App",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat qui officia corporis tempora nihil voluptate.",
+    demo: "",
+    repo: ""
+  },
+  {
+    title: "Social Media App",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat qui officia corporis tempora nihil voluptate.",
+    demo: "",
+    repo: ""
+  },
+  {
+    title: "Social Media App",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat qui officia corporis tempora nihil voluptate.",
+    demo: "",
+    repo: ""
+  },
+  {
+    title: "Social Media App",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat qui officia corporis tempora nihil voluptate.",
+    demo: "",
+    repo: ""
+  },
+  {
+    title: "Social Media App",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat qui officia corporis tempora nihil voluptate.",
+    demo: "",
+    repo: ""
   }
 ])
 </script>
