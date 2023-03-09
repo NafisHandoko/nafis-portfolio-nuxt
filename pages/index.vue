@@ -8,7 +8,7 @@
     <a class="" href="https://dribbble.com/nafishandoko"><i class="bi bi-dribbble"></i></a>
   </div>
   <header
-    class="bg-center bg-cover text-white bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')]">
+    class="bg-center bg-fixed bg-cover text-white bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')]">
     <div class='bg-black/50 min-h-screen'>
       <nav class='container mx-auto flex flex-col md:flex-row items-center md:justify-center w-full px-28 py-10'>
         <ul class='flex flex-row gap-x-7 items-center text-light'>
@@ -61,7 +61,7 @@
   <section class="bg-[#141414] py-16 text-white">
     <div class="container mx-auto flex flex-col items-center px-40">
       <h2 class="font-bold text-2xl mb-7">My projects</h2>
-      <div class="grid grid-cols-3 gap-7 text-black">
+      <div class="grid grid-cols-2 gap-7 text-black">
         <div class="bg-white rounded-xl p-2" v-for="(project, index) in projects">
           <div class="bg-center bg-cover w-full h-[150px] shadow-xl rounded-lg bg-[url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80')]"></div>
           <div class="flex flex-row items-center p-4 gap-3">
@@ -78,7 +78,11 @@
       </div>
     </div>
   </section>
-  <footer></footer>
+  <footer class="bg-[#141414] pt-20 pb-10 text-white">
+    <div class="container mx-auto flex flex-col items-center">
+      <span class="text-center">Made with ❤️ by Nafis Handoko</span>
+    </div>
+  </footer>
 </template>
 
 <script setup>
