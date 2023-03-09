@@ -7,9 +7,21 @@
                 <img class="w-1/2 rounded-lg"
                     src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
                     alt="">
-                <div class="w-1/2 flex flex-col items-start gap-3">
+                <div class="w-1/2 flex flex-col items-start gap-4">
                     <h2 class="font-bold text-xl">Social Media App</h2>
                     <p>Tech Stack : React, Tailwind, Golang, PostgreSQL</p>
+                    <div class="grid grid-cols-4 grid-flow-row auto-rows-max gap-2">
+                        <VBadge outlined color="primary">E-Commerce</VBadge>
+                        <VBadge outlined color="secondary">Fullstack</VBadge>
+                        <VBadge outlined color="warning">API</VBadge>
+                        <VBadge outlined color="info">Javascript</VBadge>
+                        <VBadge outlined color="success">SQL</VBadge>
+                        <VBadge outlined color="error">Vercel</VBadge>
+                    </div>
+                    <div class="flex flex-row items-center gap-3 text-xl">
+                        <a class="" href="https://github.com/nafishandoko"><i class="bi bi-github"></i></a>
+                        <a class="" href="https://github.com/nafishandoko"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
