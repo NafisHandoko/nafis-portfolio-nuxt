@@ -2,7 +2,7 @@
     <section class="bg-black-primary text-white py-12">
         <div class="container mx-auto flex flex-col items-center px-40">
             <div class="flex flex-row items-center mb-10 w-full gap-5">
-                <div class="w-10 h-10 flex items-center justify-center rounded-full border border-white"><i
+                <div @click="back" class="w-10 h-10 flex items-center justify-center rounded-full border border-white cursor-pointer hover:bg-white hover:text-black-primary transition-all"><i
                         class="bi bi-arrow-left-short"></i></div>
                 <h1 class="font-bold text-2xl">Project Detail</h1>
             </div>
@@ -43,3 +43,10 @@
         </div>
     </section>
 </template>
+
+<script setup>
+const router = useRouter();
+const back = () => {
+    router.back();
+}
+</script>

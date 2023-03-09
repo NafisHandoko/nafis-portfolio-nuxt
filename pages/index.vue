@@ -132,6 +132,14 @@ const skills = ref([
   {
     class: "devicon-nextjs-original-wordmark",
     url: "https://nextjs.org/"
+  },
+  {
+    class: "devicon-laravel-plain-wordmark colored",
+    url: "https://laravel.com/"
+  },
+  {
+    class: "devicon-flutter-plain colored",
+    url: "https://flutter.dev/"
   }
 ])
 
