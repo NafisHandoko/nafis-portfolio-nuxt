@@ -1,5 +1,12 @@
 <template>
-  <div class="fixed top-[30%] left-[6%] h-[50vh] border-r border-white"></div>
+  <div class="fixed top-[30%] left-[6%] flex flex-col items-center gap-1">
+    <div class="h-[35vh] border-r border-white"></div>
+    <div class="rounded-full p-1 bg-white"></div>
+    <div class="h-[2vh] border-r border-white"></div>
+    <div class="rounded-full p-1 bg-white"></div>
+    <div class="h-[5vh] border-r border-white"></div>
+  </div>
+  <!-- <div class="fixed top-[30%] left-[6%] h-[50vh] border-r border-white"></div> -->
   <div class="flex flex-col items-center justify-between py-10 fixed top-[30%] right-[6%] text-white h-[50vh]">
     <a class="" href="https://github.com/nafishandoko"><i class="bi bi-github"></i></a>
     <a class="" href="https://www.linkedin.com/in/nafishandoko"><i class="bi bi-linkedin"></i></a>
@@ -25,7 +32,7 @@
       </div>
     </div>
   </header>
-  <section class="bg-[#141414] py-16 text-white">
+  <section class="bg-black-primary py-16 text-white">
     <div class="container mx-auto flex flex-col items-center text-center px-40">
       <h2 class="font-bold text-2xl text-white mb-7">Who i am</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem ea laudantium alias blanditiis,
@@ -33,13 +40,14 @@
         sint tenetur. Enim laboriosam natus commodi, dignissimos praesentium eos tempora.</p>
     </div>
   </section>
-  <section class="bg-[#141414] py-16 text-white">
+  <section class="bg-black-primary py-16 text-white">
     <div class="container mx-auto flex flex-col items-center px-40">
       <h2 class="font-bold text-2xl mb-7">What i do</h2>
       <div class="flex flex-row items-stretch gap-7">
-        <div v-for="service in services" :key="service.id">
-          <div class="bg-[#252525] rounded border border-[#252525] hover:border-white p-5 pt-10 space-y-2 h-full">
-            <span class="font-bold text-lg">{{ service.id }}</span>
+        <div v-for="(service, index) in services" :key="index">
+          <div class="bg-black-secondary rounded border border-black-secondary hover:border-white p-5 h-full flex flex-col items-start">
+            <i class="self-center text-3xl py-5" :class="service.icon"></i>
+            <span class="font-bold text-lg">{{ index+1 }}</span>
             <h3 class="font-bold text-lg">{{ service.title }}</h3>
             <p class="text-white/[.5]">{{ service.desc }}</p>
           </div>
@@ -47,22 +55,22 @@
       </div>
     </div>
   </section>
-  <section class="bg-[#141414] py-16 text-white">
+  <section class="bg-black-primary py-16 text-white">
     <div class="container mx-auto flex flex-col items-center px-40">
       <h2 class="font-bold text-2xl mb-7">What i am capable of</h2>
       <div class="flex flex-row items-center gap-4 text">
-        <div v-for="skill in skills" :key="skill.id">
+        <div v-for="(skill, index) in skills" :key="index">
           <a :href="skill.url" class="inline-block text-center text-3xl border border-white rounded p-3"><i
               :class="skill.class"></i></a>
         </div>
       </div>
     </div>
   </section>
-  <section class="bg-[#141414] py-16 text-white">
+  <section class="bg-black-primary py-16 text-white">
     <div class="container mx-auto flex flex-col items-center px-40">
       <h2 class="font-bold text-2xl mb-7">My projects</h2>
       <div class="grid grid-cols-2 gap-7 text-black">
-        <div class="bg-white rounded-xl p-2" v-for="(project, index) in projects">
+        <div class="bg-white rounded-xl p-2 hover:scale-105 transition-all" v-for="(project, index) in projects">
           <div class="bg-center bg-cover w-full h-[150px] shadow-xl rounded-lg bg-[url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80')]"></div>
           <div class="flex flex-row items-center p-4 gap-3">
             <div class="flex flex-col gap-1">
@@ -72,13 +80,14 @@
             <div class="text-lg flex flex-col items-center gap-1">
               <a class="" href="https://github.com/nafishandoko"><i class="bi bi-github"></i></a>
               <a class="" href="https://github.com/nafishandoko"><i class="bi bi-box-arrow-up-right"></i></a>
+              <NuxtLink to="/projects/1"><i class="bi bi-info-circle"></i></NuxtLink>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <footer class="bg-[#141414] pt-20 pb-10 text-white">
+  <footer class="bg-black-primary pt-20 pb-10 text-white">
     <div class="container mx-auto flex flex-col items-center">
       <span class="text-center">Made with ❤️ by Nafis Handoko</span>
     </div>
@@ -88,17 +97,17 @@
 <script setup>
 const services = ref([
   {
-    id: 1,
+    icon: "bi bi-code-slash",
     title: "Web Development",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum, voluptatibus debitis natus repellendus fugiat!"
   },
   {
-    id: 2,
+    icon: "bi bi-palette",
     title: "UI/UX Design",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum, voluptatibus debitis natus repellendus fugiat!"
   },
   {
-    id: 3,
+    icon: "bi bi-phone",
     title: "Mobile Development",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum, voluptatibus debitis natus repellendus fugiat!"
   }
@@ -106,32 +115,26 @@ const services = ref([
 
 const skills = ref([
   {
-    id: 1,
     class: "devicon-html5-plain-wordmark colored",
     url: "https://html.com/html5/"
   },
   {
-    id: 2,
     class: "devicon-css3-plain-wordmark colored",
     url: "https://css3.com/"
   },
   {
-    id: 3,
     class: "devicon-javascript-plain colored",
     url: "https://www.javascript.com/"
   },
   {
-    id: 4,
     class: "devicon-tailwindcss-plain colored",
     url: "https://tailwindcss.com/"
   },
   {
-    id: 5,
     class: "devicon-react-original-wordmark colored",
     url: "https://reactjs.org/"
   },
   {
-    id: 6,
     class: "devicon-nextjs-original-wordmark",
     url: "https://nextjs.org/"
   }

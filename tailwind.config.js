@@ -42,6 +42,8 @@ module.exports = {
         success: colors.emerald,
         warning: colors.yellow,
         error: colors.rose,
+        "black-primary": "#141414",
+        "black-secondary": "#252525"
       },
     },
   },
