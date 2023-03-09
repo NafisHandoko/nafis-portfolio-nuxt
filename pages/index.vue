@@ -17,7 +17,7 @@
   <header
     class="bg-center bg-fixed bg-cover text-white bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')]">
     <div class='bg-black/70 min-h-screen'>
-      <nav class='container mx-auto flex flex-col md:flex-row items-center md:justify-center w-full px-28 py-10'>
+      <nav class='container mx-auto hidden md:flex flex-col md:flex-row items-center md:justify-center w-full px-28 py-10'>
         <ul class='flex flex-row gap-x-7 items-center text-light'>
           <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all" href="#">Home</a></li>
           <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all" href="#">About</a>
