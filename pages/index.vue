@@ -14,29 +14,46 @@
     <a class="" href="mailto:naffisioner@gmail.com"><i class="bi bi-envelope"></i></a>
     <a class="" href="https://dribbble.com/nafishandoko"><i class="bi bi-dribbble"></i></a>
   </div>
+  <!-- <div
+    className="bg-white text-black-primary text-center fixed z-20 top-0 transition-all w-full h-screen flex items-center justify-center">
+    <button className='text-3xl block md:hidden py-5 absolute top-2 right-6'><i class="bi bi-x-lg"></i></button>
+    <ul className='container mx-auto flex flex-col items-center justify-between gap-10'>
+      <li className='text-3xl font-medium'><a href="#">OUR WORK</a></li>
+      <li className='text-3xl font-medium'><a href="#">OUR WORK</a></li>
+      <li className='text-3xl font-medium'><a href="#">OUR TEAM</a></li>
+      <li className='text-3xl font-medium'><a href="#">CONTACT</a></li>
+    </ul>
+  </div> -->
   <header
     class="bg-center bg-fixed bg-cover text-white bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')]">
     <div class='bg-black/70 min-h-screen'>
-      <nav class='container mx-auto hidden md:flex flex-col md:flex-row items-center md:justify-center w-full px-28 py-10'>
+      <nav
+        class='container mx-auto hidden md:flex flex-col md:flex-row items-center md:justify-center w-full px-28 py-10'>
         <ul class='flex flex-row gap-x-7 items-center text-light'>
-          <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all" href="#">Home</a></li>
-          <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all" href="#">About</a>
+          <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all"
+              href="#">Home</a></li>
+          <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all"
+              href="#about">About</a>
           </li>
-          <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all" href="#">Services</a>
+          <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all"
+              href="#services">Services</a>
           </li>
-          <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all" href="#">Skills</a>
+          <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all"
+              href="#skills">Skills</a>
           </li>
-          <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all" href="#">Works</a>
+          <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all"
+              href="#works">Works</a>
           </li>
         </ul>
       </nav>
+      <!-- <button><i class="bi bi-list"></i></button> -->
       <div
         class='min-h-[75vh] container mx-auto w-full flex flex-col items-center justify-center gap-y-5 text-center px-10 md:px-0'>
         <h1 class='font-bold text-3xl'>NAFIS HANDOKO</h1>
       </div>
     </div>
   </header>
-  <section class="bg-black-primary py-16 text-white">
+  <section class="bg-black-primary py-16 text-white" id="about">
     <div class="container mx-auto flex flex-col items-center text-center px-10 md:px-40">
       <h2 class="font-bold text-2xl text-white mb-7">Who i am</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem ea laudantium alias blanditiis,
@@ -63,7 +80,7 @@
   <section class="bg-black-primary py-16 text-white">
     <div class="container mx-auto flex flex-col items-center px-10 md:px-40">
       <h2 class="font-bold text-2xl mb-7">What i am capable of</h2>
-      <div class="flex flex-row flex-wrap items-center gap-4 text">
+      <div class="flex flex-row flex-wrap items-center justify-center gap-4 text">
         <div v-for="(skill, index) in skills" :key="index">
           <a :href="skill.url" class="inline-block text-center text-3xl border border-white rounded p-3"><i
               :class="skill.class"></i></a>
@@ -102,12 +119,12 @@ const services = ref([
   {
     icon: "bi bi-code-slash",
     title: "Web Development",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum, voluptatibus debitis natus repellendus fugiat!"
+    desc: "I can help you build a good looking website with stunning animation"
   },
   {
     icon: "bi bi-palette",
     title: "UI/UX Design",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum, voluptatibus debitis natus repellendus fugiat!"
+    desc: "I can help you build a complete prototye of your products"
   },
   {
     icon: "bi bi-phone",
@@ -209,5 +226,4 @@ const projects = ref([
     0 0 30px white,
     0 0 30px white;
   filter: dropshadow(color=white, offx=2, offy=2);
-}
-</style>
+}</style>
