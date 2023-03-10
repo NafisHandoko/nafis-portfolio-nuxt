@@ -52,8 +52,9 @@
       </nav>
       <!-- <button><i class="bi bi-list"></i></button> -->
       <div
-        class='min-h-[75vh] container mx-auto w-full flex flex-col items-center justify-center gap-y-5 text-center px-10 md:px-0'>
+        class='min-h-[75vh] container mx-auto w-full flex flex-col items-center justify-center gap-y-2 text-center px-10 md:px-0'>
         <h1 class='font-bold text-3xl'>NAFIS HANDOKO</h1>
+        <p class="text-sm font-light">Web Developer</p>
       </div>
     </div>
   </header>
