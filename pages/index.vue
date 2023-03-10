@@ -1,4 +1,8 @@
 <template>
+  <a href="#header"
+    class="fixed bottom-[5%] right-[5%] text-white w-10 h-10 hidden md:flex items-center justify-center rounded-full border border-white cursor-pointer hover:bg-white hover:text-black-primary transition-all">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
   <div class="fixed top-[30%] left-[6%] hidden md:flex flex-col items-center gap-1">
     <div class="h-[35vh] border-r border-white"></div>
     <div class="rounded-full p-1 bg-white"></div>
@@ -24,7 +28,7 @@
       <li className='text-3xl font-medium'><a href="#">CONTACT</a></li>
     </ul>
   </div> -->
-  <header
+  <header id="header"
     class="bg-center bg-fixed bg-cover text-white bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')]">
     <div class='bg-black/70 min-h-screen'>
       <nav
@@ -54,19 +58,28 @@
     </div>
   </header>
   <section class="bg-black-primary py-16 text-white" id="about">
-    <div class="container mx-auto flex flex-col items-center text-center px-10 md:px-40">
+    <div class="container mx-auto flex flex-col items-center text-center px-10 md:px-40" data-aos="fade-up">
       <h2 class="font-bold text-2xl text-white mb-7">Who i am</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptatem ea laudantium alias blanditiis,
-        fugiat consequatur cumque nam praesentium laborum, libero itaque adipisci autem a dolor quam, ut recusandae iusto
-        sint tenetur. Enim laboriosam natus commodi, dignissimos praesentium eos tempora.</p>
+      <p>I am a Computer Science student majoring in
+        Information Technology at Universitas Jember. I
+        am a person who has a passion in the world of
+        technology such as software development and UI
+        design. As a college student, I have used
+        languages like Javascript, Laravel, Flask, and
+        Flutter to work on a variety of projects.
+        Additionally, I have completed a five-month
+        internship at PT Bisa Artifisial Indonesia as a Web
+        Programmer working on a jobdesk creating
+        websites using ReactJS and Tailwindcss for
+        landing pages, the admin side, and customers.</p>
     </div>
   </section>
-  <section class="bg-black-primary py-16 text-white">
+  <section class="bg-black-primary py-16 text-white" id="services">
     <div class="container mx-auto flex flex-col items-center px-10 md:px-40">
       <h2 class="font-bold text-2xl mb-7">What i do</h2>
       <div class="flex flex-col md:flex-row items-stretch gap-7">
-        <div v-for="(service, index) in services" :key="index">
-          <div
+        <div v-for="(service, index) in services" :key="index" class="w-full md:w-1/3">
+          <div data-aos="flip-right"
             class="bg-black-secondary rounded border border-black-secondary hover:border-white p-5 h-full flex flex-col items-start">
             <i class="self-center text-3xl py-5" :class="service.icon"></i>
             <span class="font-bold text-lg">{{ index + 1 }}</span>
@@ -77,18 +90,18 @@
       </div>
     </div>
   </section>
-  <section class="bg-black-primary py-16 text-white">
+  <section class="bg-black-primary py-16 text-white" id="skills">
     <div class="container mx-auto flex flex-col items-center px-10 md:px-40">
       <h2 class="font-bold text-2xl mb-7">What i am capable of</h2>
       <div class="flex flex-row flex-wrap items-center justify-center gap-4 text">
         <div v-for="(skill, index) in skills" :key="index">
-          <a :href="skill.url" class="inline-block text-center text-3xl border border-white rounded p-3"><i
-              :class="skill.class"></i></a>
+          <a :href="skill.url" class="inline-block text-center text-3xl border border-white rounded p-3"
+            data-aos="flip-down"><i :class="skill.class"></i></a>
         </div>
       </div>
     </div>
   </section>
-  <section class="bg-black-primary py-16 text-white">
+  <section class="bg-black-primary py-16 text-white" id="works">
     <div class="container mx-auto flex flex-col items-center px-10 md:px-40">
       <h2 class="font-bold text-2xl mb-7">My projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-7 text-black">
@@ -98,7 +111,7 @@
           </div> -->
           <!-- <div class="bg-center bg-cover w-full h-[150px] shadow-xl rounded-lg" :class="`bg-[url('${project.img}')]`"></div> -->
           <div class="bg-center bg-cover w-full h-[150px] shadow-xl rounded-lg"
-            :style="{ backgroundImage: `url(${project.img})` }"></div>
+            :style="{ backgroundImage: `url(${project.img})` }" data-aos="flip-left"></div>
           <div class="flex flex-row items-center p-4 justify-between gap-2">
             <div class="flex flex-col gap-1">
               <h3 class="font-bold">{{ project.title }}</h3>
@@ -131,7 +144,7 @@ const services = ref([
   {
     icon: "bi bi-phone",
     title: "Mobile Development",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut eum, voluptatibus debitis natus repellendus fugiat!"
+    desc: "I am able to create mobile app with Flutter that can help you solve your problem"
   }
 ])
 

@@ -36,3 +36,9 @@ welcome()
     </Layout>
   </NuxtLayout>
 </template>
+
+<style>
+html{
+  scroll-behavior: smooth;
+}
+</style>
