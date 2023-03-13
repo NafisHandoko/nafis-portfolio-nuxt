@@ -56,5 +56,5 @@ const route = useRoute()
 // When accessing /posts/1, route.params.id will be 1
 // console.log(route.params.id)
 const projectId = ref(route.params.id)
-const {data:project} = await useFetch(`/api/projects?id=${projectId.value}`)
+const {data:project} = await useFetch(`/api/projects/${projectId.value}`)
 </script>
