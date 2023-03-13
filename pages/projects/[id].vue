@@ -57,5 +57,4 @@ const route = useRoute()
 // console.log(route.params.id)
 const projectId = ref(route.params.id)
 const {data:project} = await useFetch(`/api/projects?id=${projectId.value}`)
-console.log(project.value)
 </script>
