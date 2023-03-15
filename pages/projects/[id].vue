@@ -24,8 +24,8 @@
                         <VBadge outlined color="error">Vercel</VBadge>
                     </div>
                     <div class="flex flex-row items-center gap-3 text-xl">
-                        <a class="" href="https://github.com/nafishandoko"><i class="bi bi-github"></i></a>
-                        <a class="" href="https://github.com/nafishandoko"><i class="bi bi-box-arrow-up-right"></i></a>
+                        <a class="" :href="project.repo"><i class="bi bi-github"></i></a>
+                        <a class="" :href="project.demo"><i class="bi bi-box-arrow-up-right"></i></a>
                     </div>
                 </div>
             </div>

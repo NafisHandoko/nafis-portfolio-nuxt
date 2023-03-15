@@ -14,6 +14,7 @@ export default defineNuxtConfig({
       ],
       script: [
         // <script src="https://myawesome-lib.js"></script>
+        // { src: 'https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js' },
         // { src: 'https://unpkg.com/aos@2.3.1/dist/aos.js' }
       ],
     }
