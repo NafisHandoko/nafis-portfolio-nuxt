@@ -130,7 +130,7 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import Typed from 'typed.js'
 
 export default {
@@ -145,20 +145,19 @@ export default {
   },
   beforeDestroy() {
     // Make sure to destroy the Typed instance when the component is destroyed
-    this.typed.destroy()
+    this.$typed.destroy()
   }
 }
 </script>
 
-<script setup>
-// import Typed from 'typed.js';
+<script setup lang="ts">
+interface Service {
+  icon: string,
+  title: string,
+  desc: string
+}
 
-// const typed = new Typed('#element', {
-//   strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
-//   typeSpeed: 50,
-// });
-
-const services = ref([
+const services = ref<Service[]>([
   {
     icon: "bi bi-code-slash",
     title: "Web Development",
@@ -176,7 +175,12 @@ const services = ref([
   }
 ])
 
-const skills = ref([
+interface Skill {
+  class: string,
+  url: string
+}
+
+const skills = ref<Skill[]>([
   {
     class: "devicon-html5-plain-wordmark colored",
     url: "https://html.com/html5/"
