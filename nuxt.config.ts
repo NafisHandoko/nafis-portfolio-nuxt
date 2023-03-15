@@ -21,5 +21,6 @@ export default defineNuxtConfig({
   },
   plugins: [
     { src: '~/plugins/aos', mode: 'client' },
+    // { src: '~/plugins/typed-js', mode: 'client' }
   ],
 });

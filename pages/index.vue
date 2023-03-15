@@ -53,8 +53,8 @@
       <!-- <button><i class="bi bi-list"></i></button> -->
       <div
         class='min-h-[75vh] container mx-auto w-full flex flex-col items-center justify-center gap-y-2 text-center px-10 md:px-0'>
-        <h1 class='font-bold text-3xl'>NAFIS HANDOKO</h1>
-        <p class="text-sm font-light">Web Developer</p>
+        <h1 class='font-bold text-3xl'>Hi I am <span ref="typed"></span></h1>
+        <!-- <p class="text-sm font-light">Web Developer</p> -->
       </div>
     </div>
   </header>
@@ -130,7 +130,34 @@
   </section>
 </template>
 
+<script>
+import Typed from 'typed.js'
+
+export default {
+  mounted() {
+    const options = {
+      strings: ['a Mobile Developer', 'Nafis Handoko', 'a Web Developer', 'a UI Designer'],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true
+    }
+    const typed = new Typed(this.$refs.typed, options)
+  },
+  beforeDestroy() {
+    // Make sure to destroy the Typed instance when the component is destroyed
+    this.typed.destroy()
+  }
+}
+</script>
+
 <script setup>
+// import Typed from 'typed.js';
+
+// const typed = new Typed('#element', {
+//   strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+//   typeSpeed: 50,
+// });
+
 const services = ref([
   {
     icon: "bi bi-code-slash",

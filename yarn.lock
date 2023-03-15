@@ -6454,6 +6454,10 @@ type-is@^1.6.16:
     media-typer "0.3.0"
     mime-types "~2.1.24"
 
+typed.js@^2.0.132:
+  version "2.0.132"
+  resolved "git+ssh://git@github.com/mattboldt/typed.js.git#3d2dd9c068742018c75eb69b1946ebdc252b5ecd"
+
 ufo@^1.0.0, ufo@^1.1.0, ufo@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/ufo/-/ufo-1.1.1.tgz"
