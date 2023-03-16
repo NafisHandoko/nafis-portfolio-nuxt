@@ -38,16 +38,16 @@
         </section>
         <section class="bg-black-primary text-white py-12">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-10 md:px-40">
-                <div class="flex flex-col items-start gap-2" v-for="index in 10" :key="index">
+                <NuxtLink to="/articles/1" class="flex flex-col items-start gap-2" v-for="index in 10" :key="index">
                     <div
                         class="bg-center bg-cover h-48 w-full bg-[url('https://images.unsplash.com/photo-1508739826987-b79cd8b7da12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80')]">
                     </div>
-                    <span class="text-purple-500 text-sm">Olivia Rhye • 20 Jan 2022</span>
-                    <h2 class="text-2xl">UX review presentations</h2>
+                    <span class="text-purple-500 text-xs">Olivia Rhye • 20 Jan 2022</span>
+                    <h2 class="text-xl">UX review presentations</h2>
                     <p class="text-white/[.5]">How do you create compelling presentations that wow your colleagues and
                         impress
                         your managers?</p>
-                </div>
+                </NuxtLink>
             </div>
         </section>
     </div>
