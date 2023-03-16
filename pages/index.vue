@@ -48,6 +48,9 @@
           <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all"
               href="#works">Works</a>
           </li>
+          <li class="border border-transparent hover:border-b-white transition-all">
+            <NuxtLink class="glow transition-all" to="/articles">Articles</NuxtLink>
+          </li>
         </ul>
       </nav>
       <!-- <button><i class="bi bi-list"></i></button> -->
