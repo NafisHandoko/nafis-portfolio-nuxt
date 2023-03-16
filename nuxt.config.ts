@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     shim: false,
   },
   app: {
+    pageTransition: {name: 'page', mode: 'out-in'},
     head: {
       link: [
         // <link rel="stylesheet" href="https://myawesome-lib.css">
