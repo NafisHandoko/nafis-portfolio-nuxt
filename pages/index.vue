@@ -14,11 +14,11 @@
     <!-- <div class="fixed top-[30%] left-[6%] h-[50vh] border-r border-white"></div> -->
     <div
       class="hidden md:flex flex-col items-center justify-between py-10 fixed top-[30%] right-[6%] text-white h-[50vh]">
-      <a class="" href="https://github.com/nafishandoko"><i class="bi bi-github"></i></a>
-      <a class="" href="https://www.linkedin.com/in/nafishandoko"><i class="bi bi-linkedin"></i></a>
-      <a class="" href="https://instagram.com/nafishandoko"><i class="bi bi-instagram"></i></a>
-      <a class="" href="mailto:naffisioner@gmail.com"><i class="bi bi-envelope"></i></a>
-      <a class="" href="https://dribbble.com/nafishandoko"><i class="bi bi-dribbble"></i></a>
+      <a class="" target="_blank" href="https://github.com/nafishandoko"><i class="bi bi-github"></i></a>
+      <a class="" target="_blank" href="https://www.linkedin.com/in/nafishandoko"><i class="bi bi-linkedin"></i></a>
+      <a class="" target="_blank" href="https://instagram.com/nafishandoko"><i class="bi bi-instagram"></i></a>
+      <a class="" target="_blank" href="mailto:naffisioner@gmail.com"><i class="bi bi-envelope"></i></a>
+      <a class="" target="_blank" href="https://dribbble.com/nafishandoko"><i class="bi bi-dribbble"></i></a>
     </div>
     <!-- <div
     className="bg-white text-black-primary text-center fixed z-20 top-0 transition-all w-full h-screen flex items-center justify-center">
@@ -101,7 +101,7 @@
         <h2 class="font-bold text-2xl mb-7">What i am capable of</h2>
         <div class="flex flex-row flex-wrap items-center justify-center gap-4 text">
           <div v-for="(skill, index) in skills" :key="index">
-            <a :href="skill.url" class="inline-block text-center text-3xl border border-white rounded p-3"
+            <a target="_blank" :href="skill.url" class="inline-block text-center text-3xl border border-white rounded p-3"
               data-aos="flip-down"><i :class="skill.class"></i></a>
           </div>
         </div>
@@ -124,8 +124,8 @@
                 <p class="text-sm">{{ project.shortDesc }}</p>
               </div>
               <div class="text-lg flex flex-col items-center gap-1">
-                <a class="" :href="project.repo"><i class="bi bi-github"></i></a>
-                <a class="" :href="project.demo"><i class="bi bi-box-arrow-up-right"></i></a>
+                <a class="" target="_blank" :href="project.repo"><i class="bi bi-github"></i></a>
+                <a class="" target="_blank" :href="project.demo"><i class="bi bi-box-arrow-up-right"></i></a>
                 <NuxtLink :to="`/projects/${index}`"><i class="bi bi-info-circle"></i></NuxtLink>
               </div>
             </div>
