@@ -23,8 +23,7 @@
   },
   "dependencies": {
     "@gits-id/ui-nuxt": "^0.16.1",
-    "aos": "^2.3.4",
-    "typed.js": "^2.0.132"
+    "aos": "^2.3.4"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.3.0",

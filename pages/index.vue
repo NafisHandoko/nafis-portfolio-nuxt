@@ -58,8 +58,9 @@
         <!-- <button><i class="bi bi-list"></i></button> -->
         <div
           class='min-h-[75vh] container mx-auto w-full flex flex-col items-center justify-center gap-y-2 text-center px-10 md:px-0'>
-          <h1 class='font-bold text-3xl'>Hi I am <span ref="typed"></span></h1>
-          <!-- <p class="text-sm font-light">Web Developer</p> -->
+          <!-- <h1 class='font-bold text-3xl'>Hi I am <span ref="typed"></span></h1> -->
+          <h1 class="font-bold text-3xl">Nafis Handoko</h1>
+          <p class="text-sm font-light">Web Developer</p>
         </div>
       </div>
     </header>
@@ -136,7 +137,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<!-- <script lang="ts">
 import Typed from 'typed.js'
 
 export default {
@@ -154,7 +155,7 @@ export default {
     this.$typed.destroy()
   }
 }
-</script>
+</script> -->
 
 <script setup lang="ts">
 interface Service {
