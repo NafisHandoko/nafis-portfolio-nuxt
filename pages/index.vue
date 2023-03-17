@@ -30,7 +30,7 @@
       <li class='text-xl font-medium'><a href="#services">Services</a></li>
       <li class='text-xl font-medium'><a href="#skills">Skills</a></li>
       <li class='text-xl font-medium'><a href="#works">Works</a></li>
-      <li class='text-xl font-medium'><a href="#articles">Articles</a></li>
+      <li class='text-xl font-medium'><NuxtLink to="/articles">Articles</NuxtLink></li>
     </ul>
   </div>
     <header id="header"
