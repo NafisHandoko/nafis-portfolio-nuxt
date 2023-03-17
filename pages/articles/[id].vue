@@ -11,7 +11,7 @@
                 </div>
                 <div class="flex flex-col items-center text-center gap-3">
                     <span class="text-purple-500">Published 20 Jan 2022</span>
-                    <h1 class="text-3xl">UX review presentations</h1>
+                    <h1 class="text-3xl">{{ article.title }}</h1>
                     <p class="text-white/[.5] text-sm">How do you create compelling presentations that wow your colleagues
                         and impress your managers?</p>
                     <div
@@ -22,21 +22,7 @@
         </section>
         <section class="bg-black-primary text-white py-12">
             <div class="container mx-auto flex flex-col items-center px-10 md:px-40">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, facere repellendus nihil magni
-                    doloribus voluptatibus saepe id recusandae autem quos cum aliquam, dolorem quam. Nesciunt sunt iure nisi
-                    perferendis quas et aut, nostrum, recusandae omnis animi praesentium laborum saepe pariatur natus amet
-                    placeat voluptatibus aliquid eligendi. Veniam facere laboriosam suscipit natus dolor magnam cupiditate,
-                    iste quos soluta rerum voluptatibus, provident perspiciatis, amet aperiam at mollitia similique? Hic
-                    dolorem aliquam minima. Mollitia aspernatur placeat magni minus eligendi, voluptate incidunt quas nulla,
-                    fuga, magnam velit nemo ab? Corrupti hic facere maxime quos in perferendis possimus dicta ipsum
-                    provident aperiam iste maiores adipisci sequi ipsa rem nobis iusto, id qui quasi quo! Laboriosam,
-                    voluptatibus possimus necessitatibus quod aut quis eveniet? Eveniet placeat provident vero id et non
-                    iste commodi inventore ipsam laudantium quae ipsa odit ullam ipsum voluptates minima ab omnis, assumenda
-                    velit facere? Dolores consequuntur veritatis quisquam officia quas inventore quo nihil quasi itaque
-                    autem in fugit, natus aspernatur reiciendis deleniti numquam est ex recusandae, illo aliquid doloribus
-                    illum mollitia voluptate assumenda. Assumenda perferendis corporis, eius blanditiis autem consequuntur,
-                    non consequatur neque voluptatum molestias quisquam explicabo! Id aliquam modi voluptas nisi dolore eos.
-                    Commodi cupiditate consequuntur nemo, et rerum qui vero sapiente!</p>
+                <p>{{article.body}}</p>
             </div>
         </section>
 </div></template>
@@ -50,4 +36,10 @@ const back = () => {
 // onMounted(() => {
 //     console.log(test.value.innerHTML)
 // })
+
+const route = useRoute()
+// When accessing /posts/1, route.params.id will be 1
+// console.log(route.params.id)
+const articleId = ref(route.params.id)
+const { data: article } = await useFetch(`https://dummyjson.com/posts/${articleId.value}`)
 </script>
