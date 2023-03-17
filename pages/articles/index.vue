@@ -40,7 +40,8 @@
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-10 md:px-40">
                 <NuxtLink to="/articles/1" class="flex flex-col items-start gap-2" v-for="(article, index) in articles.posts" :key="index">
                     <div
-                        class="bg-center bg-cover h-48 w-full bg-[url('https://images.unsplash.com/photo-1508739826987-b79cd8b7da12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80')]">
+                    :style="{ backgroundImage: `url(https://source.unsplash.com/random/?${article.tags[1]})` }"
+                        class="bg-center bg-cover h-48 w-full">
                     </div>
                     <span class="text-purple-500 text-xs">Olivia Rhye • 20 Jan 2022</span>
                     <h2 class="text-xl">{{article.title}}</h2>
@@ -63,5 +64,6 @@ const route = useRoute()
 // const projectId = ref<string | string[]>(route.params.id)
 // const { data: project } = await useFetch(`/api/projects/${projectId.value}`)
 const { data: articles } = await useFetch('https://dummyjson.com/posts')
-// console.log(articles.value.posts[0].title)
+console.log(articles.value.posts[0].tags)
+const randomImg = ref('https://source.unsplash.com/random')
 </script>
