@@ -20,22 +20,26 @@
       <a class="" target="_blank" href="mailto:naffisioner@gmail.com"><i class="bi bi-envelope"></i></a>
       <a class="" target="_blank" href="https://dribbble.com/nafishandoko"><i class="bi bi-dribbble"></i></a>
     </div>
-    <!-- <div
-    className="bg-white text-black-primary text-center fixed z-20 top-0 transition-all w-full h-screen flex items-center justify-center">
-    <button className='text-3xl block md:hidden py-5 absolute top-2 right-6'><i class="bi bi-x-lg"></i></button>
-    <ul className='container mx-auto flex flex-col items-center justify-between gap-10'>
-      <li className='text-3xl font-medium'><a href="#">OUR WORK</a></li>
-      <li className='text-3xl font-medium'><a href="#">OUR WORK</a></li>
-      <li className='text-3xl font-medium'><a href="#">OUR TEAM</a></li>
-      <li className='text-3xl font-medium'><a href="#">CONTACT</a></li>
+    <div
+    :class="showMobileNav ? 'left-[50%] md:left-[100%]' : 'left-[100%]'"
+    class="bg-white text-black-primary text-center fixed z-20 top-0 left-[100%] transition-all w-1/2 h-screen flex items-center justify-center">
+    <button @click="showMobileNav = false" class='text-3xl block md:hidden py-5 absolute top-2 right-6'><i class="bi bi-x-lg"></i></button>
+    <ul class='container mx-auto flex flex-col items-center justify-between gap-7'>
+      <li class='text-xl font-medium'><a href="#">Home</a></li>
+      <li class='text-xl font-medium'><a href="#">About</a></li>
+      <li class='text-xl font-medium'><a href="#">Services</a></li>
+      <li class='text-xl font-medium'><a href="#">Skills</a></li>
+      <li class='text-xl font-medium'><a href="#">Works</a></li>
+      <li class='text-xl font-medium'><a href="#">Articles</a></li>
     </ul>
-  </div> -->
+  </div>
     <header id="header"
       class="bg-center bg-fixed bg-cover text-white bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')]">
       <div class='bg-black/70 min-h-screen'>
         <nav
-          class='container mx-auto hidden md:flex flex-col md:flex-row items-center md:justify-center w-full px-28 py-10'>
-          <ul class='flex flex-row gap-x-7 items-center text-light'>
+          class='container mx-auto flex flex-col md:flex-row items-center md:justify-center w-full px-7 md:px-28 py-10'>
+          <button class='text-3xl block md:hidden self-end' @click="showMobileNav = true"><i class="bi bi-list"></i></button>
+          <ul class='hidden md:flex flex-row gap-x-7 items-center text-light'>
             <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all"
                 href="#">Home</a></li>
             <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all"
@@ -158,6 +162,8 @@ export default {
 </script> -->
 
 <script setup lang="ts">
+const showMobileNav = ref<boolean>(false)
+
 interface Service {
   icon: string,
   title: string,
