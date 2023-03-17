@@ -26,11 +26,11 @@
     <button @click="showMobileNav = false" class='text-3xl block md:hidden py-5 absolute top-2 right-6'><i class="bi bi-x-lg"></i></button>
     <ul class='container mx-auto flex flex-col items-center justify-between gap-7'>
       <li class='text-xl font-medium'><a href="#">Home</a></li>
-      <li class='text-xl font-medium'><a href="#">About</a></li>
-      <li class='text-xl font-medium'><a href="#">Services</a></li>
-      <li class='text-xl font-medium'><a href="#">Skills</a></li>
-      <li class='text-xl font-medium'><a href="#">Works</a></li>
-      <li class='text-xl font-medium'><a href="#">Articles</a></li>
+      <li class='text-xl font-medium'><a href="#about">About</a></li>
+      <li class='text-xl font-medium'><a href="#services">Services</a></li>
+      <li class='text-xl font-medium'><a href="#skills">Skills</a></li>
+      <li class='text-xl font-medium'><a href="#works">Works</a></li>
+      <li class='text-xl font-medium'><a href="#articles">Articles</a></li>
     </ul>
   </div>
     <header id="header"
