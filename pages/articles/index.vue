@@ -64,6 +64,6 @@ const route = useRoute()
 // const projectId = ref<string | string[]>(route.params.id)
 // const { data: project } = await useFetch(`/api/projects/${projectId.value}`)
 const { data: articles } = await useFetch('https://dummyjson.com/posts')
-console.log(articles.value.posts[0])
+// console.log(articles.value.posts[0])
 const randomImg = ref('https://source.unsplash.com/random')
 </script>
