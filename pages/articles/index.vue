@@ -29,10 +29,8 @@
                         class="bg-center bg-cover h-72 w-full bg-[url('https://images.unsplash.com/photo-1508739826987-b79cd8b7da12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1373&q=80')]">
                     </div>
                     <span class="text-purple-500 text-sm">Olivia Rhye • 20 Jan 2022</span>
-                    <h2 class="text-2xl">UX review presentations</h2>
-                    <p class="text-white/[.5]">How do you create compelling presentations that wow your colleagues and
-                        impress
-                        your managers?</p>
+                    <h2 class="text-2xl">{{ articles.posts[0].title }}</h2>
+                    <p class="text-white/[.5]">{{ articles.posts[0].body }}</p>
                 </div>
             </div>
         </section>
