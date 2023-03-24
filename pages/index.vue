@@ -14,11 +14,11 @@
     <!-- <div class="fixed top-[30%] left-[6%] h-[50vh] border-r border-white"></div> -->
     <div
       class="hidden md:flex flex-col items-center justify-between py-10 fixed top-[30%] right-[6%] text-white h-[50vh]">
-      <a class="" target="_blank" href="https://github.com/nafishandoko"><i class="bi bi-github"></i></a>
-      <a class="" target="_blank" href="https://www.linkedin.com/in/nafishandoko"><i class="bi bi-linkedin"></i></a>
-      <a class="" target="_blank" href="https://instagram.com/nafishandoko"><i class="bi bi-instagram"></i></a>
-      <a class="" target="_blank" href="mailto:naffisioner@gmail.com"><i class="bi bi-envelope"></i></a>
-      <a class="" target="_blank" href="https://dribbble.com/nafishandoko"><i class="bi bi-dribbble"></i></a>
+      <a class="glow transition-all" target="_blank" href="https://github.com/nafishandoko"><i class="bi bi-github"></i></a>
+      <a class="glow transition-all" target="_blank" href="https://www.linkedin.com/in/nafishandoko"><i class="bi bi-linkedin"></i></a>
+      <a class="glow transition-all" target="_blank" href="https://instagram.com/nafishandoko"><i class="bi bi-instagram"></i></a>
+      <a class="glow transition-all" target="_blank" href="mailto:naffisioner@gmail.com"><i class="bi bi-envelope"></i></a>
+      <a class="glow transition-all" target="_blank" href="https://dribbble.com/nafishandoko"><i class="bi bi-dribbble"></i></a>
     </div>
     <div
     :class="showMobileNav ? 'left-[50%] md:left-[100%]' : 'left-[100%]'"
@@ -91,7 +91,7 @@
         <div class="flex flex-col md:flex-row items-stretch gap-7">
           <div v-for="(service, index) in services" :key="index" class="w-full md:w-1/3">
             <div data-aos="flip-right"
-              class="bg-black-secondary rounded border border-black-secondary hover:border-white p-5 h-full flex flex-col items-start">
+              class="shadow-2xl shadow-white/[.5] bg-black-secondary rounded border border-black-secondary hover:border-white p-5 h-full flex flex-col items-start">
               <i class="self-center text-3xl py-5" :class="service.icon"></i>
               <span class="font-bold text-lg">{{ index + 1 }}</span>
               <h3 class="font-bold text-lg">{{ service.title }}</h3>
@@ -106,7 +106,7 @@
         <h2 class="font-bold text-2xl mb-7">What i am capable of</h2>
         <div class="flex flex-row flex-wrap items-center justify-center gap-4 text">
           <div v-for="(skill, index) in skills" :key="index">
-            <a target="_blank" :href="skill.url" class="inline-block text-center text-3xl border border-white rounded p-3"
+            <a target="_blank" :href="skill.url" class="shadow-2xl shadow-white inline-block text-center text-3xl border border-white rounded p-3"
               data-aos="flip-down"><i :class="skill.class"></i></a>
           </div>
         </div>
