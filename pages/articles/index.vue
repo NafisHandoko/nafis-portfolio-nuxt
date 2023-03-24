@@ -13,11 +13,11 @@
                     <span class="text-purple-500">Our blog</span>
                     <h1 class="text-3xl">Resources and insights</h1>
                     <p class="text-white/[.5] text-sm">The latest industry news, interviews, technologies, and resources</p>
-                    <div class="flex flex-row items-stretch gap-3">
+                    <div class="flex flex-col md:flex-row items-stretch gap-3">
                         <input type="text" name="email" id="email" placeholder="Enter your email"
                             class="border rounded border-[#D0D5DD] px-5 text-sm">
                         <input type="button" value="Get started"
-                            class="bg-purple-500 hover:bg-purple-600 px-5 rounded text-sm">
+                            class="bg-purple-500 hover:bg-purple-600 px-5 py-2 md:py-0 rounded text-sm">
                     </div>
                 </div>
             </div>
