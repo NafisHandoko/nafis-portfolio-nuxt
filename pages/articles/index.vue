@@ -36,7 +36,7 @@
         </section>
         <section class="bg-black-primary text-white py-12">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-10 md:px-40">
-                <NuxtLink :to="`/articles/${article.id}`" class="flex flex-col items-start gap-2" v-for="(article, index) in articles.posts" :key="index">
+                <NuxtLink :to="`/articles/${article.id}`" class="flex flex-col items-start gap-2" v-for="(article, index) in articles.posts.slice(1)" :key="index">
                     <div
                     :style="{ backgroundImage: `url(https://source.unsplash.com/random/?${article.tags[1]})` }"
                         class="bg-center bg-cover h-48 w-full">
