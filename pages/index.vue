@@ -14,31 +14,39 @@
     <!-- <div class="fixed top-[30%] left-[6%] h-[50vh] border-r border-white"></div> -->
     <div
       class="hidden md:flex flex-col items-center justify-between py-10 fixed top-[30%] right-[6%] text-white h-[50vh]">
-      <a class="glow transition-all" target="_blank" href="https://github.com/nafishandoko"><i class="bi bi-github"></i></a>
-      <a class="glow transition-all" target="_blank" href="https://www.linkedin.com/in/nafishandoko"><i class="bi bi-linkedin"></i></a>
-      <a class="glow transition-all" target="_blank" href="https://instagram.com/nafishandoko"><i class="bi bi-instagram"></i></a>
-      <a class="glow transition-all" target="_blank" href="mailto:naffisioner@gmail.com"><i class="bi bi-envelope"></i></a>
-      <a class="glow transition-all" target="_blank" href="https://dribbble.com/nafishandoko"><i class="bi bi-dribbble"></i></a>
+      <a class="glow transition-all" target="_blank" href="https://github.com/nafishandoko"><i
+          class="bi bi-github"></i></a>
+      <a class="glow transition-all" target="_blank" href="https://www.linkedin.com/in/nafishandoko"><i
+          class="bi bi-linkedin"></i></a>
+      <a class="glow transition-all" target="_blank" href="https://instagram.com/nafishandoko"><i
+          class="bi bi-instagram"></i></a>
+      <a class="glow transition-all" target="_blank" href="mailto:naffisioner@gmail.com"><i
+          class="bi bi-envelope"></i></a>
+      <a class="glow transition-all" target="_blank" href="https://dribbble.com/nafishandoko"><i
+          class="bi bi-dribbble"></i></a>
     </div>
-    <div
-    :class="showMobileNav ? 'left-[50%] md:left-[100%]' : 'left-[100%]'"
-    class="bg-white text-black-primary text-center fixed z-20 top-0 left-[100%] transition-all w-1/2 h-screen flex items-center justify-center">
-    <button @click="showMobileNav = false" class='text-3xl block md:hidden py-5 absolute top-2 right-6'><i class="bi bi-x-lg"></i></button>
-    <ul class='container mx-auto flex flex-col items-center justify-between gap-7'>
-      <li class='text-xl font-medium'><a href="#">Home</a></li>
-      <li class='text-xl font-medium'><a href="#about">About</a></li>
-      <li class='text-xl font-medium'><a href="#services">Services</a></li>
-      <li class='text-xl font-medium'><a href="#skills">Skills</a></li>
-      <li class='text-xl font-medium'><a href="#works">Works</a></li>
-      <li class='text-xl font-medium'><NuxtLink to="/articles">Articles</NuxtLink></li>
-    </ul>
-  </div>
+    <div :class="showMobileNav ? 'left-[50%] md:left-[100%]' : 'left-[100%]'"
+      class="bg-white text-black-primary text-center fixed z-20 top-0 left-[100%] transition-all w-1/2 h-screen flex items-center justify-center">
+      <button @click="showMobileNav = false" class='text-3xl block md:hidden py-5 absolute top-2 right-6'><i
+          class="bi bi-x-lg"></i></button>
+      <ul class='container mx-auto flex flex-col items-center justify-between gap-7'>
+        <li class='text-xl font-medium'><a href="#">Home</a></li>
+        <li class='text-xl font-medium'><a href="#about">About</a></li>
+        <li class='text-xl font-medium'><a href="#services">Services</a></li>
+        <li class='text-xl font-medium'><a href="#skills">Skills</a></li>
+        <li class='text-xl font-medium'><a href="#works">Works</a></li>
+        <li class='text-xl font-medium'>
+          <NuxtLink to="/articles">Articles</NuxtLink>
+        </li>
+      </ul>
+    </div>
     <header id="header"
       class="bg-center bg-fixed bg-cover text-white bg-[url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')]">
       <div class='bg-black/70 min-h-screen'>
         <nav
           class='container mx-auto flex flex-col md:flex-row items-center md:justify-center w-full px-7 md:px-28 py-10'>
-          <button class='text-3xl block md:hidden self-end' @click="showMobileNav = true"><i class="bi bi-list"></i></button>
+          <button class='text-3xl block md:hidden self-end' @click="showMobileNav = true"><i
+              class="bi bi-list"></i></button>
           <ul class='hidden md:flex flex-row gap-x-7 items-center text-light'>
             <li class="border border-transparent hover:border-b-white transition-all"><a class="glow transition-all"
                 href="#">Home</a></li>
@@ -63,8 +71,13 @@
         <div
           class='min-h-[75vh] container mx-auto w-full flex flex-col items-center justify-center gap-y-2 text-center px-10 md:px-0'>
           <!-- <h1 class='font-bold text-3xl'>Hi I am <span ref="typed"></span></h1> -->
-          <h1 class="font-bold text-3xl">Nafis Handoko</h1>
-          <p class="text-sm font-light">Web Developer</p>
+          <h1 class="font-bold text-3xl">
+            Hi i am
+            <span class="typed-text">{{ typedData.typeValue }}</span>
+            <span class="blinking-cursor">|</span>
+            <span class="cursor" :class="{ typing: typedData.typeStatus }">&nbsp;</span>
+          </h1>
+          <!-- <p class="text-sm font-light">Web Developer</p> -->
         </div>
       </div>
     </header>
@@ -106,7 +119,8 @@
         <h2 class="font-bold text-2xl mb-7">What i am capable of</h2>
         <div class="flex flex-row flex-wrap items-center justify-center gap-4 text">
           <div v-for="(skill, index) in skills" :key="index">
-            <a target="_blank" :href="skill.url" class="shadow-2xl shadow-white inline-block text-center text-3xl border border-white rounded p-3"
+            <a target="_blank" :href="skill.url"
+              class="shadow-2xl shadow-white inline-block text-center text-3xl border border-white rounded p-3"
               data-aos="flip-down"><i :class="skill.class"></i></a>
           </div>
         </div>
@@ -229,6 +243,63 @@ const skills = ref<Skill[]>([
 ])
 
 const { data: projects } = await useFetch('/api/projects')
+
+interface TypedData {
+  typeValue: string,
+  typeStatus: boolean,
+  displayTextArray: string[],
+  typingSpeed: number,
+  erasingSpeed: number,
+  newTextDelay: number,
+  displayTextArrayIndex: number,
+  charIndex: number,
+}
+const typedData = ref<TypedData>({
+  typeValue: "",
+  typeStatus: false,
+  displayTextArray: ['Nafis Handoko', 'a Web Developer', 'a Mobile Developer', 'a UI Designer'],
+  typingSpeed: 80,
+  erasingSpeed: 80,
+  newTextDelay: 1500,
+  displayTextArrayIndex: 0,
+  charIndex: 0,
+})
+
+const typeText = () => {
+  if (typedData.value.charIndex < typedData.value.displayTextArray[typedData.value.displayTextArrayIndex].length) {
+    if (!typedData.value.typeStatus) typedData.value.typeStatus = true;
+    typedData.value.typeValue += typedData.value.displayTextArray[typedData.value.displayTextArrayIndex].charAt(
+      typedData.value.charIndex
+    );
+    typedData.value.charIndex += 1;
+    setTimeout(typeText, typedData.value.typingSpeed);
+  } else {
+    typedData.value.typeStatus = false;
+    setTimeout(eraseText, typedData.value.newTextDelay);
+  }
+}
+
+const eraseText = () => {
+  if (typedData.value.charIndex > 0) {
+    if (!typedData.value.typeStatus) typedData.value.typeStatus = true;
+    typedData.value.typeValue = typedData.value.displayTextArray[typedData.value.displayTextArrayIndex].substring(
+      0,
+      typedData.value.charIndex - 1
+    );
+    typedData.value.charIndex -= 1;
+    setTimeout(eraseText, typedData.value.erasingSpeed);
+  } else {
+    typedData.value.typeStatus = false;
+    typedData.value.displayTextArrayIndex += 1;
+    if (typedData.value.displayTextArrayIndex >= typedData.value.displayTextArray.length)
+      typedData.value.displayTextArrayIndex = 0;
+    setTimeout(typeText, typedData.value.typingSpeed + 1000);
+  }
+}
+
+onMounted(() => {
+  setTimeout(typeText, typedData.value.newTextDelay + 200);
+})
 </script>
 
 <style scoped>
@@ -255,5 +326,79 @@ const { data: projects } = await useFetch('/api/projects')
     0 0 30px white,
     0 0 30px white;
   filter: dropshadow(color=white, offx=2, offy=2);
+}
+
+/* span.typed-text {
+  color: #d2b94b;
+} */
+
+.blinking-cursor {
+  font-size: 2rem;
+  color: white;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: white;
+  }
+}
+
+@-moz-keyframes blink {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes blink {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: white;
+  }
+}
+
+@-ms-keyframes blink {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: white;
+  }
+}
+
+@-o-keyframes blink {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: white;
+  }
 }
 </style>
