@@ -1,7 +1,7 @@
 import data from "./data"
 
 export default defineEventHandler(async (event) => {
-    const {id} = event.context.params
+    // const { id } = getQuery(event);
 
-    return data[id]
+    return data.reverse()
 })
