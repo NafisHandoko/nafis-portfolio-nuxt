@@ -128,6 +128,14 @@ export default defineEventHandler(async (event) => {
             "repo": "https://github.com/NafisHandoko/spdm-yhc",
             "demo": "https://spdm-yhc.000webhostapp.com/",
             "img": "/img/portfolio/spdm-yhc.png"
+        },
+        {
+            "title": "NeuralBot",
+            "shortDesc": "ChatGPT Clone using OpenAI API",
+            "longDesc": "lorem ipsum dolor sit amet",
+            "repo": "https://github.com/NafisHandoko/neuralbot-fe",
+            "demo": "https://neuralbot-fe.netlify.app/",
+            "img": "/img/portfolio/neuralbot.png"
         }
     ]
 
